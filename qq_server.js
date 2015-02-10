@@ -1,6 +1,6 @@
 Qq = {};
 
-Oauth.registerService('qq', 2, null, function(query) {
+OAuth.registerService('qq', 2, null, function(query) {
 
   var response = getTokenResponse(query);
   return {
@@ -112,5 +112,5 @@ var getTokenResponse = function (query) {
 };
 
 Qq.retrieveCredential = function(credentialToken, credentialSecret) {
-  return Oauth.retrieveCredential(credentialToken, credentialSecret);
+  return OAuth.retrieveCredential(credentialToken, credentialSecret);
 };
