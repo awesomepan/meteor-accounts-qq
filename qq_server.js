@@ -10,7 +10,15 @@ OAuth.registerService('qq', 2, null, function(query) {
       nickname: response.userInfo.nickname
     },
     options: {
-      profile: { name: response.userInfo.nickname },
+      profile: {
+        name: response.userInfo.nickname, 
+        figureurl: response.userInfo.figureurl, 	//大小为30×30像素的QQ空间头像URL。
+        figureurl_1: response.userInfo.figureurl_1, 	//	大小为50×50像素的QQ空间头像URL。
+        figureurl_2: response.userInfo.figureurl_2, 	//	大小为100×100像素的QQ空间头像URL。
+        figureurl_qq_1: response.userInfo.figureurl_qq_1, 	//	大小为40×40像素的QQ头像URL。
+        figureurl_qq_2: response.userInfo.figureurl_qq_2, 	//	大小为100×100像素的QQ头像URL。需要注意，不是所有的用户都拥有QQ的100x100的头像，但40x40像素则是一定会有。
+        gender: response.userInfo.gender 	//	性别。 如果获取不到则默认返回"男"
+      },
     }
   };
 });
